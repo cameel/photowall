@@ -2,7 +2,7 @@
 
 <ul class='idea-space'>
 <% @ideas.each do |idea| %>
-  <li class='idea'>
+  <li class='idea' data-x='<%= idea.x %>' data-y='<%= idea.y %>'>
     <div class='idea-header'>
       <span class='idea-name'>
         <%= link_to idea do %>

@@ -2,10 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.idea-space {
+  position: relative;
+}
+
 .idea {
   border:        1px solid #eeeeee;
   margin-bottom: 1em;
   display:       inline-block;
+  position:      absolute;
 }
 
 .idea-header {
