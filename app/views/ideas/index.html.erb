@@ -5,10 +5,11 @@
   <li class='idea'>
     <div class='idea-header'>
       <span class='idea-name'>
-        <%= idea.name %>
+        <%= link_to idea do %>
+          <%= idea.name %>
+        <% end %>
       </span>
       <span class='idea-links'>
-        <%= link_to 'Show', idea %> |
         <%= link_to 'Edit', edit_idea_path(idea) %> |
         <%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %>
       </span>
