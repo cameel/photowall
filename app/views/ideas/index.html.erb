@@ -1,14 +1,20 @@
 <h1>Listing ideas</h1>
 
-<ul>
+<ul class='idea-space'>
 <% @ideas.each do |idea| %>
-  <li>
-    <p><%= idea.name %></p>
+  <li class='idea'>
+    <div class='idea-header'>
+      <span class='idea-name'>
+        <%= idea.name %>
+      </span>
+      <span class='idea-links'>
+        <p><%= link_to 'Show', idea %></p>
+        <p><%= link_to 'Edit', edit_idea_path(idea) %></p>
+        <p><%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %></p>
+      </span>
+    </div>
     <p><%= idea.description %></p>
     <p><%= idea.picture %></p>
-    <p><%= link_to 'Show', idea %></p>
-    <p><%= link_to 'Edit', edit_idea_path(idea) %></p>
-    <p><%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %></p>
   </li>
 <% end %>
 </ul>
