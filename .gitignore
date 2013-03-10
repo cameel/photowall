@@ -16,3 +16,7 @@
 
 # Uploaded pictures
 /public/uploads
+
+# Vim's temporary files
+*.swp
+*.swo
