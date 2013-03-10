@@ -1,26 +1,17 @@
 <h1>Listing ideas</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Picture</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<ul>
 <% @ideas.each do |idea| %>
-  <tr>
-    <td><%= idea.name %></td>
-    <td><%= idea.description %></td>
-    <td><%= idea.picture %></td>
-    <td><%= link_to 'Show', idea %></td>
-    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-    <td><%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+  <li>
+    <p><%= idea.name %></p>
+    <p><%= idea.description %></p>
+    <p><%= idea.picture %></p>
+    <p><%= link_to 'Show', idea %></p>
+    <p><%= link_to 'Edit', edit_idea_path(idea) %></p>
+    <p><%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %></p>
+  </li>
 <% end %>
-</table>
+</ul>
 
 <br />
 
