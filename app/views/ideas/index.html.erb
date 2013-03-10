@@ -8,9 +8,9 @@
         <%= idea.name %>
       </span>
       <span class='idea-links'>
-        <p><%= link_to 'Show', idea %></p>
-        <p><%= link_to 'Edit', edit_idea_path(idea) %></p>
-        <p><%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %></p>
+        <%= link_to 'Show', idea %> |
+        <%= link_to 'Edit', edit_idea_path(idea) %> |
+        <%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %>
       </span>
     </div>
     <p><%= idea.description %></p>
