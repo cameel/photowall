@@ -13,3 +13,5 @@ $(document).ready ->
       $idea.css('left', x + 'px')
     if y?
       $idea.css('top',  y + 'px')
+
+    $idea.draggable()
