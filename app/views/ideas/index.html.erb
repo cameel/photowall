@@ -13,8 +13,8 @@
         <%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %>
       </span>
     </div>
+    <%= image_tag(idea.picture_url) if idea.picture.present? %>
     <p><%= idea.description %></p>
-    <p><%= idea.picture %></p>
   </li>
 <% end %>
 </ul>
