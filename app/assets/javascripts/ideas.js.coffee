@@ -8,10 +8,20 @@ $(document).ready ->
 
     x  = $idea.data('x')
     y  = $idea.data('y')
+    id = $idea.data('id')
 
     if x?
       $idea.css('left', x + 'px')
     if y?
       $idea.css('top',  y + 'px')
 
-    $idea.draggable()
+    drop_handler = (event, ui) ->
+      $.ajax(
+        type: 'PUT'
+        url:  '/ideas/' + id + '.json'
+        data:
+          'idea[x]': ui.position.left
+          'idea[y]': ui.position.top
+      )
+
+    $idea.draggable(stop: drop_handler)
